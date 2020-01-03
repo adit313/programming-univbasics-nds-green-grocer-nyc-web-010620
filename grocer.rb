@@ -23,7 +23,12 @@ def consolidate_cart(cart)
  
  i=0
  while cart[i] do
-   result << {:item => cart[i][:item], :price => cart[i][:price], :clearence => cart[i][:clearence], :count => allitems.count(cart[i][:item])}
+   result << {
+     :item => cart[i][:item], 
+     :price => cart[i][:price], 
+     :clearence => if cart[i][:clearence] then TRUE else FALSE end, 
+     :count => allitems.count(cart[i][:item])
+   }
    i += 1
  end
  pp result.uniq
