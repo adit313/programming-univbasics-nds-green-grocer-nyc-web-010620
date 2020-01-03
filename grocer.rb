@@ -43,9 +43,9 @@ def apply_coupons(cart, coupons)
       then 
       cart << 
       {
-        
+        cart[i][:price] = (coupons[0][:cost]/coupons[0][:num])
       }
-      cart[i][:price] = (coupons[0][:cost]/coupons[0][:num])
+      
     end
       i+=1
     end
