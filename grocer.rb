@@ -15,7 +15,7 @@ def consolidate_cart(cart)
  
  i=0
  while cart[i] do
-   allitems[] << cart[i][:item]
+   allitems << cart[i][:item]
    i += 1
  end
  
