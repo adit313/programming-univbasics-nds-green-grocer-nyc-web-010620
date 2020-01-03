@@ -16,6 +16,8 @@ def consolidate_cart(cart)
    allitems[] << cart[i][:item]
    i += 1
  end
+ 
+ allitems.count(cart[i][:item])
 
 def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
