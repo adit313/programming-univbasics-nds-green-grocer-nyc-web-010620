@@ -43,6 +43,7 @@ def apply_coupons(cart, coupons)
   while cart[i] do
     if ((cart[i][:item] == coupons[j][:item]) && (cart[i][:count] >= coupons[j][:num]))
       then 
+      p "worked"
       cart[i][:count] = (cart[i][:count] - coupons[j][:num])
       cart << {
         :item => (cart[i][:item] + " W/COUPON"),
