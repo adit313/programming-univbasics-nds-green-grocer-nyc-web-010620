@@ -41,18 +41,18 @@ def apply_coupons(cart, coupons)
   i = 0
   while temp[i] do
     
-    if ((temp[i][:item] == coupons[j][:item]) && (temp[i][:count] >= coupons[j][:num]))
+    if ((temp[i][:item] == coupons[j][:item]) && (temp[i][:count] >= coupons[0][:num]))
       then 
       p temp[i][:count]
       p "working"
       p temp[i][:count]-coupons[j][:num]
-      temp[i][:count] = (temp[i][:count]-coupons[j][:num])
+      temp[i][:count] = (temp[i][:count]-coupons[0][:num])
       p temp[i][:count]
       temp << {
         :item => (temp[i][:item] + " W/COUPON"),
-        :price => coupons[j][:price]/coupons[j][:num],
+        :price => coupons[0][:price]/coupons[0][:num],
         :clearance => temp[i][:clearance],
-        :count => coupons[j][:num]
+        :count => coupons[0][:num]
       }
     end
     
