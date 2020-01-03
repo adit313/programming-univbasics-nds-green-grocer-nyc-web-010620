@@ -26,7 +26,7 @@ def consolidate_cart(cart)
    result << {
      :item => cart[i][:item], 
      :price => cart[i][:price], 
-     :clearence => if cart[i][:clearence] == "ture" then true else false end, 
+     :clearence => if cart[i][:clearence] == "true" then true else false end, 
      :count => allitems.count(cart[i][:item])
    }
    i += 1
