@@ -36,7 +36,13 @@ def apply_coupons(cart, coupons)
   #
   # REMEMBER: This method **should** update cart
   
-  return_cart
+  i=0
+  while cart[i] do
+    if then 
+    end
+      i+=1
+    end
+    return cart
 end
 
 def apply_clearance(cart)
