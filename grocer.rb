@@ -44,6 +44,7 @@ def apply_coupons(cart, coupons)
     if ((temp[i][:item] == coupons[j][:item]) && (temp[i][:count] >= coupons[j][:num]))
       then 
       p temp[i][:count]
+      p "working"
       p temp[i][:count]-coupons[j][:num]
       temp[i][:count] = (temp[i][:count]-coupons[j][:num])
       p temp[i][:count]
