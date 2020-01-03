@@ -42,7 +42,7 @@ def apply_coupons(cart, coupons)
   i = 0
   while cart[i] do
     while ((cart[i][:item] == coupons[j][:item])&&(cart[i][:count]>= coupons[j][:num]))
-      do 
+      then 
       cart[i][:count] = (cart[i][:count] - coupons[j][:num])
       cart << {
         :item => "#{cart[i][:item]} W/COUPON",
