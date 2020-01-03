@@ -40,7 +40,12 @@ def apply_coupons(cart, coupons)
   i=0
   while cart[i] do
     if (cart[i][:item] == coupons[0][:item]) && (cart[i][:count] >= coupons[0][:num])
-      then cart[i][:price] = (coupons[0][:cost]/coupons[0][:num])
+      then 
+      cart << 
+      {
+        
+      }
+      cart[i][:price] = (coupons[0][:cost]/coupons[0][:num])
     end
       i+=1
     end
