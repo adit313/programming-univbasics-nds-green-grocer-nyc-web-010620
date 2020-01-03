@@ -37,21 +37,27 @@ def apply_coupons(cart, coupons)
   # REMEMBER: This method **should** update cart
   pp cart
   pp coupons
+  j=0 
+  while coupons[j] do
+    
   i=0
   while cart[i] do
-    if (cart[i][:item] == coupons[0][:item]) && (cart[i][:count] >= coupons[0][:num])
+    if (cart[i][:item] == coupons[j][:item]) && (cart[i][:count] >= coupons[j][:num])
       then 
       cart << 
       {
         :item => (cart[i][:item] + " W/COUPON"),
-        :price => (coupons[0][:cost]/coupons[0][:num]),
+        :price => (coupons[j][:cost]/coupons[j][:num]),
         :clearance => cart[i][:clearance],
-        :count => coupons[0][:num]
+        :count => coupons[j][:num]
       }
-      cart[i][:count] -= coupons[0][:num]
+      cart[i][:count] -= coupons[j][:num]
     end
-      i+=1
+      i += 1
     end
+    j += 1
+  end
+    
     pp cart
     return cart
 end
