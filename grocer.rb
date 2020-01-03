@@ -1,7 +1,11 @@
 def find_item_by_name_in_collection(name, collection)
-  # Implement me first!
-  #
-  # Consult README for inputs and outputs
+  i=0
+  while collection[i] do
+  return collection[i] if collection[i][:item] == name
+  i+=1
+  end
+
+  return nil
 end
 
 def consolidate_cart(cart)
