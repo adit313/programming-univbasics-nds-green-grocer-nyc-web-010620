@@ -41,7 +41,7 @@ def apply_coupons(cart, coupons)
   while coupons[j] do
   i = 0
   while cart[i] do
-    while ((cart[i][:item] == coupons[j][:item])&&(cart[i][:count]>= coupons[j][:num]))
+    if ((cart[i][:item] == coupons[j][:item])&&(cart[i][:count]>= coupons[j][:num]))
       then 
       cart[i][:count] = (cart[i][:count] - coupons[j][:num])
       cart << {
