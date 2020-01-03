@@ -10,14 +10,19 @@ end
 
 def consolidate_cart(cart)
  result=[]
- i=0
  allitems[]
+
+ i=0
  while cart[i] do
    allitems[] << cart[i][:item]
    i += 1
  end
  
- allitems.count(cart[i][:item])
+ i=0
+ while cart[i] do
+   result << {:item => cart[i][:item], :count => allitems.count(cart[i][:item])
+ 
+ return result.uniq()
 
 def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
