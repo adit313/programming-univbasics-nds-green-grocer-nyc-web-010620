@@ -10,7 +10,7 @@ end
 
 def consolidate_cart(cart)
  result=[]
- allitems[]
+ allitems = []
  pp cart
  
  i=0
