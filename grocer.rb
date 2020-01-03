@@ -11,15 +11,12 @@ end
 def consolidate_cart(cart)
  result=[]
  allitems = []
- pp cart
- 
+
  i=0
  while cart[i] do
    allitems << cart[i][:item]
    i += 1
  end
- 
- pp allitems
  
  i=0
  while cart[i] do
@@ -31,7 +28,6 @@ def consolidate_cart(cart)
    }
    i += 1
  end
- pp result.uniq
  return result.uniq
  end
 
