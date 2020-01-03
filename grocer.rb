@@ -38,8 +38,9 @@ def apply_coupons(cart, coupons)
   
   i=0
   while cart[i] do
-    if then 
-    end
+    if (cart[i][:item] == coupons[0][:item]) && (cart[i][:count] == coupons[0][:count])
+      then 
+    endcart[i][:item]
       i+=1
     end
     return cart
