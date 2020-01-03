@@ -36,19 +36,19 @@ def apply_coupons(cart, coupons)
   #
   # REMEMBER: This method **should** update cart
   pp cart
+  temp = cart
   pp coupons
   j = 0
   while coupons[j] do
   i = 0
-  while cart[i] do
-    if ((cart[i][:item] == coupons[j][:item]) && (cart[i][:count] >= coupons[j][:num]))
+  while temp[i] do
+    if ((temp[i][:item] == coupons[j][:item]) && (temp[i][:count] >= coupons[j][:num]))
       then 
-      p "worked"
-      cart[i][:count] = (cart[i][:count] - coupons[j][:num])
-      cart << {
-        :item => (cart[i][:item] + " W/COUPON"),
+      temp[i][:count] = (temp[i][:count] - coupons[j][:num])
+      temp << {
+        :item => (temp[i][:item] + " W/COUPON"),
         :price => coupons[j][:price]/coupons[j][:num],
-        :clearance => cart[i][:clearance],
+        :clearance => temp[i][:clearance],
         :count => coupons[j][:num]
       }
     end
@@ -56,8 +56,8 @@ def apply_coupons(cart, coupons)
     end
   j += 1
   end
-    pp cart
-    return cart
+    pp temp
+    return temp
 end
 
 def apply_clearance(cart)
